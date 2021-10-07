@@ -1,0 +1,26 @@
+.progress-bar-area {
+    position: absolute;
+    left: 15%;
+    top: 10%;
+}
+
+.progress-ring__circle {
+	transition: 0.35s stroke-dashoffset;
+	transform: rotate(-90deg);
+	transform-origin: 50% 50%;
+    transition: all 0.3s ease;
+}
+
+.progress-ring__circle:hover {
+    stroke: white;
+}
+
+.progress-bar-count {
+    color: white;
+    position: absolute;
+    left: 45%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+}
+

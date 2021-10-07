@@ -1,0 +1,65 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+		<link rel="stylesheet" href="tasks.css" />
+		<link rel="stylesheet" href="mainbody.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="progress-bar-area">
+
+			<svg class="progress-ring" width="360" height="360">
+				<circle
+					class="progress-ring__circle"
+					stroke="skyblue"
+					stroke-width="10"
+                    stroke-linecap="round"
+					fill="transparent"
+					r="152"
+					cx="160"
+					cy="160"
+				/>
+                <div class="progress-bar-count">0%</div>
+			</svg>
+		</div>
+
+		<div class="tasks-area">
+			<div class="tasks-area-title">Tasks</div>
+
+			<div class="tasks">
+				
+				<div class="task">
+					<div class="msg">Random text</div>
+					<div class="check-box-hover-area">
+						<div class="check-box"></div>
+					</div>
+					<div class="trash"></div>
+				</div>
+
+                <div class="task">
+					<div class="msg">Random text</div>
+					<div class="check-box-hover-area">
+						<div class="check-box"></div>
+					</div>
+					<div class="trash"></div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="task-add">
+			<input type="text" class="task-add-textbox" placeholder="Add a task..." />
+			<div class="task-add-button-area">
+				<div class="task-add-button"></div>
+			</div>
+		</div>
+	</body>
+	<script src="main.js"></script>
+</html>

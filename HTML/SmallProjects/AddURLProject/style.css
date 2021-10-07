@@ -1,0 +1,49 @@
+body {
+    background-color: rgb(43, 80, 80);
+    background-image: linear-gradient(145deg,rgb(0, 255, 98), rgb(9, 168, 107));
+}
+.name {
+    padding-left: 43%;
+    padding-top: 10%;
+    font-family: 'Raleway', sans-serif;
+    color: aliceblue;
+}
+
+.main-url-add {
+    margin: 0 auto;
+    margin-left: 0 auto;
+    padding-top: 20px;
+    transform: translate(20%, 50%);
+    max-width: 50%;
+    display: flex;
+}
+
+.fa-plus-circle {
+    font-size: 25px;
+}
+
+.textbox-label {
+    padding: 2px;
+    width: 50%;
+    background-color: aliceblue;
+    border-radius: 100px;
+}
+
+.textBox {
+    padding: 2px;
+    z-index: 0;
+    margin:0 auto;
+    border-radius: 30px;
+    width: 95%;
+    background-color: aliceblue;
+    border: none;
+    outline: none;
+}
+
+.newImg {
+    transition: all 1s ease;
+    opacity: 100;
+    padding: 50px;
+    height: 100px;
+}
+

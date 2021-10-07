@@ -1,0 +1,94 @@
+body {
+  margin: auto;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  cursor: none;
+  overflow: hidden;
+}
+.main {
+  height: 50px;
+  width: 250px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  background-color: blue;
+  box-shadow: 1px 1px 100px 10px blue;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.fa-cog {
+  font-size: 25px;
+  color: white;
+  transition: all 1s ease;
+}
+.fa-cog:hover {
+  font-size: 25px;
+  transform: rotateZ(180deg);
+}
+
+.fa-home {
+  font-size: 25px;
+  color: white;
+  transition: all 0.5s ease;
+}
+.fa-home:hover {
+  font-size: 26px;
+  transform: rotateZ(15deg);
+}
+
+.fa-address-card {
+  font-size: 25px;
+  color: white;
+  transition: all 0.5s ease;
+}
+.fa-address-card:hover {
+  font-size: 26px;
+  transform: rotateY(180deg);
+}
+
+.captions {
+  height: 23px;
+  width: 250px;
+  background-color: white;
+  position: absolute;
+  top: 56%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+}
+
+.captions-bar {
+  height: 23px;
+  width: 250px;
+  background-color: none;
+  position: absolute;
+  top: 56%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.newMouse {
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  background-color: white;
+  transform: translateY(-50%);
+  position: absolute;
+  pointer-events: none;
+  opacity: 45%;
+  z-index: 999;
+  transition: width 0.5s, height 0.5s, background-color 1s;
+}
+
+.captions-bar:hover ~ .newMouse {
+  height: 50px;
+  width: 50px;
+  background-color: black;
+}
+

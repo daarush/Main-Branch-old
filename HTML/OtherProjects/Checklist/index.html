@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Checklist</title>
+</head>
+<body>
+    <div class="header">Checklist</div>
+    <div class="add-div">
+        <input type="text" class="add-text" placeholder="Type Something!">
+        <div class="add-button">
+            <i class="fas fa-plus-square"></i>
+        </div>
+    </div>
+
+    <div class="container">
+        <ul id="checks" class="checks"> 
+            <li>Text1</li>
+            <li class="checked">Text2</li>
+        </ul>
+    </div>
+
+    <div class="filters">
+        <select name="filter" id="filter-dropdown">
+            <option value="all-option">All</option>
+            <option value="done" selected>Done</option>
+            <option value="notDone">Need to Do</option>
+        </select>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

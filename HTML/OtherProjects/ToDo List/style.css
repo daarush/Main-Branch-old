@@ -1,0 +1,219 @@
+body {
+    background-color: #202020;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.need-to-do-section, .doing-section, .done-section {
+    background-color: #333333;
+    height: 95%;
+    width: 32%;
+    top: 50%;
+    position: absolute;
+    box-shadow: 0 0 5px 5px rgba(32, 32, 32, 0.5);
+    border-radius: 2px;
+}
+
+.need-to-do-section {
+    left: 1%;
+    transform: translate(-1%, -50%);
+}
+
+.doing-section {
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.done-section {
+    left: 99%;
+    transform: translate(-100%, -50%);
+}
+
+.section-title {
+    font-size: 23px;
+    text-align: center;
+    color: whitesmoke;
+    width: 100%;
+    /* background-color: whitesmoke; */
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 40;
+    left: 0%;
+    background-color: white;
+    transform: translate(0%, -50%);
+}
+
+.holder {
+    height: 93%;
+    top: 1%;
+    position: relative;
+}
+
+.box {
+    background-color: whitesmoke;
+    height: auto;
+    width: 96%;
+    border-radius: 2px;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    transition: all 0.1s ease;
+}
+
+.box:hover {
+    cursor: pointer;
+    padding: 2px;
+}
+
+.box-title {    
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+    line-height: 2.5;
+}
+
+.box-info {
+    height: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.box-info.show {
+    height: auto;
+    opacity: 1;
+    padding: 8px;
+    font-size: 14px;
+}
+.menu {
+    height: 0px;
+    transition: all 0.3s ease;
+}
+
+.menu.show {
+    position: absolute;
+    background-color: whitesmoke;
+    height: auto;
+    /* height: 250px; */
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 5px #22222277;
+}
+
+.menu-title {
+    text-align: center;
+}
+
+.menu-title::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 25;
+    left: 0%;
+    background-color: #333333;
+    transform: translate(0%, -50%);
+}
+
+.menu-option {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.menu-option:hover {
+    background-color: #333333;
+    color: white;
+    cursor: pointer;
+}
+
+.create-menu-button {
+    position: absolute;
+    top: 89%;
+    right: 2%;
+    font-size: 40px;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow:  0 0 5px 5px #333333c7;
+}
+
+.create-menu-button:hover {
+    cursor: pointer;
+    animation: create-animation 3s ease infinite;
+}
+
+@keyframes create-animation {
+    0%{transform: rotateZ(0deg); color: white;}
+    20%{transform: rotateZ(360deg); color: green;}
+    100% {transform: rotateZ(360deg); color: green;}
+}
+
+.create-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: whitesmoke;
+    height: 300px;
+    width: 500px;
+    border-radius: 2px;
+    box-shadow: 0 0 5px 5px #22222279;
+}
+
+.create-menu-title {
+    font-size: 26px;
+    text-align: center;
+}
+
+.create-menu-title::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 35;
+    left: 0%;
+    background-color: #333333;
+    transform: translate(0%, -50%);
+}
+
+.enter-title, .enter-information {
+    margin: 25px;
+}
+
+input[type=text] {
+    width: 300px;
+    border: none;
+    background-color: #333333;
+    color: white;
+    right: 0%;
+    position: absolute;
+    outline: none;
+}
+
+.create-task {
+    background-color: green;
+    width: 200px;
+    text-align: center;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+.create-task:hover {
+    cursor: pointer;
+    background-color: #333333;
+    box-shadow: 0 0 5px 5px #333333;
+    /* box-shadow: 0 0 5px 5px green; */
+    color: white;
+}

@@ -1,0 +1,103 @@
+body{
+    margin: 0 auto;
+    background-color: rgb(54, 46, 46);
+    background-image: linear-gradient(145deg,orange, red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: none;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+/*====================================*/
+.container {
+    background-color: wheat/*rgb(90, 85, 85)*/;
+    height: 450px;
+    width: 325px;
+    border-radius: 25px;
+    box-shadow: 1px 1px 10px 10px gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 1s ease;
+}
+.container:hover {
+    transform: rotateY(180deg);   
+}
+/*====================================*/
+.front{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    
+}
+.front-transition{
+    opacity: 0%;
+}
+.title{
+    padding: 30px;
+    color: black;
+    font-size: 25px;
+}
+.image{
+    height: 125px;
+    width: 100%;
+}
+.description{
+    color: black;
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+}
+/*====================================*/
+.back {
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    opacity: 0%;
+
+    -webkit-transform:rotateY(180deg);
+    -moz-transform:rotateY(180deg);
+    -o-transform:rotateY(180deg);
+    -ms-transform:rotateY(180deg);
+}
+.back-transition{
+    opacity: 100%;
+}
+
+.back-text{
+    padding: 0px;
+}
+.logos{
+    color: black;
+    font-size: 25px;
+    padding: 40px;
+    padding-top: 0px;
+    height: 26px;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.newMouse {
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    background-color: black;
+    transform: translateY(-50%);
+    position: absolute;
+    pointer-events: none;
+    opacity: 45%;
+    z-index: 999;
+    transition: width 0.5s, height 0.5s, background-color 1s;
+  }
+
+.container:hover ~ .newMouse {
+    height: 100px;
+    width: 100px;
+}

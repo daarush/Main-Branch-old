@@ -1,0 +1,247 @@
+:root {
+    --theme-color: blue;
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    background-color: whitesmoke;
+}
+
+.title-bar {
+    background-color: #333333;
+    height: 10%;
+    position: sticky;
+    display: flex;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.title-bar:hover {    
+    box-shadow: 0px 0px 5px 5px rgb(51, 51, 51, 0.5);
+}
+.title, .fa-bookmark{
+    margin-left:2%;
+    font-size: 50px;
+}
+
+.fa-bookmark {
+    margin-top: 10px;
+}
+
+.title-options {
+    display: flex;
+    margin-left: 5%;
+    width: 81%;
+    justify-content: space-around;
+    line-height: 70px;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color:white
+}
+
+#title-option {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 70%;
+    position: relative;
+}
+
+#title-option::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    transform: scale(0);
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+#title-option:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.home-page, .topic-page, .about-page {
+    transition: all 0.3s ease;
+}
+
+#container-titles {
+    font-size: 50px;
+    width: 100%;
+    text-align: center;
+    transition: all 0.1s ease;
+    position: relative;
+    border-bottom: 2px black solid;
+}
+
+#container-titles::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    transform: scale(0);
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+#container-titles:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.topic-page {
+    display: flex;
+    height: 73%;
+}
+
+.topic-text-container {
+    margin-top: 15px;
+    margin-left: 5px;
+    width: 35%;
+    position: relative;
+}
+.topic-text-container::before {
+    content: "";
+    height: 100%;
+    width: 4px;
+    left: 100%;
+    bottom: 0;
+    position: absolute;
+    background-color: var(--theme-color);
+}
+
+.block {
+    position: relative;
+    display: flex;
+    font-size: 25px;
+    justify-content: space-between;
+    cursor: pointer;
+    background-color: rgb(241, 241, 241);
+    transition: all 0.3s ease;
+    margin: 10px;
+}
+
+.block.clicked {
+    /* width: 100%;
+    margin-left: -10px; */
+    background-color: rgb(0, 0, 0);
+    color: white;
+    width: 100%;
+    margin-left: -3px;
+}
+
+.block.clicked > a > i {
+    color: white;
+}
+
+.block.clicked:hover {
+    background-color: rgb(31, 31, 31);
+}
+
+.block:hover {
+    background-color: rgb(219, 219, 219);
+}
+
+.block::before {
+    content: "";
+    height: 100%;
+    width: 4px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background-color:var(--theme-color);
+}
+
+.block > a {
+    position: relative;
+    top: 7px;
+    cursor: pointer;
+    right: 2%;
+    width: 100%;
+}
+
+.block > div {
+    position: relative;
+    left: 2%;
+}
+
+a {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.topic-container {
+    width: 60%;
+    height: 100%;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* width */
+.topic-container::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgb(192, 192, 192);
+}
+
+  /* Handle */
+.topic-container::-webkit-scrollbar-thumb {
+  background: rgb(0, 38, 255); 
+}
+  
+  /* Handle on hover */
+.topic-container::-webkit-scrollbar-thumb:hover {
+  background: rgb(3, 0, 190); 
+}
+
+.block-info {
+    margin: 20px;
+    margin-bottom: 50px;
+}
+
+.block-info-title {
+    font-size: 30px;
+    text-indent: 10px;
+    background-color: rgb(227, 231, 255);
+    position: relative;
+    top: 0; 
+}
+
+.block-info-title::before {
+    content: "";
+    width: 100%;
+    height: 4px;
+    left: 0;
+    bottom: 100%;
+    position: absolute;
+    background-color:blue;
+}
+
+.block-info-title::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background-color:blue;
+}
+
+.block-information-texture {
+    background-color: rgba(0, 0, 0, 0.075);
+    border-radius: 3px;
+}
+
+.block-information {
+    margin-top: 5px;
+}

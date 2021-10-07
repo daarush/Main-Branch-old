@@ -1,0 +1,221 @@
+body {
+	background-color: #444;
+	font-family: "Poppins", sans-serif;
+	overflow: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #333;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+.tasks-area {
+	background-color: whitesmoke;
+	height: 90%;
+	width: 30%;
+	right: 1%;
+	top: 2%;
+	position: absolute;
+	border-radius: 2px;
+}
+
+.tasks-area-title {
+	top: 1%;
+	position: absolute;
+	left: 50%;
+	height: 30px;
+	line-height: 1.7;
+	transform: translate(-50%, -50%);
+	background-color: grey;
+	width: 100%;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	text-align: center;
+	color: white;
+	border-bottom: 1px solid black;
+}
+
+.tasks {
+	margin-top: 30px;
+	width: 100%;
+    position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    overflow-y: auto;
+    max-height: 92%;
+}
+
+.task {
+	background-color: whitesmoke;
+	padding-left: 15px;
+	width: 90%;
+	height: 40px;
+	font-size: 14px;
+	color: black;
+	margin-bottom: 10px;
+	position: relative;
+	line-height: 3;
+	border-radius: 2px;
+	transition: all 0.3s ease;
+	display: flex;
+}
+
+
+.task::before {
+	content: "";
+	height: 100%;
+	width: 3px;
+	background-color: blue;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translate(-50%, -50%);
+	border-radius: 2px;
+}
+
+.task:hover {
+	cursor: pointer;
+	box-shadow: 0 0 5px 3px #5555552f;
+	border: none;
+}
+
+.msg {
+	max-width: 90%;
+	flex: 2;
+	margin-right: 20px;
+}
+
+.check-box {
+	height: 15px;
+	width: 15px;
+	border: 2px solid green;
+	transition: all 0.5s ease;
+}
+
+.check-box-hover-area {
+	height: 30px;
+	width: 30px;
+	margin-right: 20px;
+	top: 100%;
+	transform: translateY(25%);
+	z-index: 6;
+}
+
+.check-box-hover-area:hover > .check-box {
+	transform: rotate(495deg);
+	border-top: 2px solid green;
+	border-right: 2px solid green;
+	border-left: none;
+	border-bottom: none;
+	width: 20px;
+	height: 7px;
+	top: 25%;
+	position: relative;
+}
+
+.task.checked > .check-box-hover-area > .check-box {
+	transform: rotate(135deg);
+	border-top: 2px solid green;
+	border-right: 2px solid green;
+	border-left: none;
+	border-bottom: none;
+	width: 20px;
+	height: 7px;
+	top: 10px;
+}
+
+.trash {
+	height: 20px;
+	width: 20px;
+	right: 10px;
+	border-top: 2px solid red;
+	top: 50%;
+	margin-left: 10px;
+	position: relative;
+}
+
+.task.deleted {
+	transform: translateX(120%);
+}
+
+.task-add {
+    position: absolute;
+    bottom: 0;
+    right: 1%;
+    background-color: white;
+    border-radius: 2px;
+    height: 50px;
+    width: 30%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+}
+
+.task-add-button {
+	background-color: #333;
+	font-size: 12px;
+	height: 2.5em;
+	width: 2.5em;
+	border-radius: 999px;
+	position: absolute;
+    left: 87%;
+    bottom: 10%;
+    transition: all 0.3s ease;
+}
+.task-add-button:after,
+.task-add-button:before {
+	content: "";
+	display: block;
+	background-color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.task-add-button:before {
+	height: 1em;
+	width: 0.2em;
+}
+
+.task-add-button:after {
+	height: 0.2em;
+	width: 1em;
+}
+
+.task-add-button:hover {
+    cursor: pointer;
+	box-shadow: 0 0 5px 5px #5555552f;
+    transform: rotate(180deg);
+}
+
+.task-add > input[type=text] {
+    height: 30px;
+    width: 25%;
+    border: none;
+    border-bottom: 2px solid black;
+    margin-left: 10px;
+    transition: all 0.5s ease;
+    outline: none;
+}
+
+.task-add > input[type=text]:focus {
+    width: 80%;
+    border-bottom: 2px solid blue;
+}

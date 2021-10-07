@@ -1,0 +1,55 @@
+body {
+    margin: 0 auto;
+    background-color: rgba(128, 128, 128, 0.575);
+}
+
+textarea {
+    resize: none;
+    height: 400px;
+    width: 400px;    
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-60%, -50%);
+    border: none;
+    outline: none;
+    text-indent: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.output {
+    resize: none;
+    height: 400px;
+    width: 400px;    
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-40%, -50%);
+    border: none;
+    outline: none;
+    text-indent: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+}
+
+.runButton {
+    position: absolute;
+    top: 85%;
+    left: 30%;
+    background-color: green;
+    color: white;
+    font-size: 30px;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    border-radius: 10px;
+    vertical-align: middle;
+}
+
+.runButton:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,61 @@
+body {
+    background-color: midnightblue;
+    font-family: 'Raleway', sans-serif;
+}
+
+.random-div {
+    height: 200px;
+    width: 200px;
+    background-color: whitesmoke;
+    padding: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    box-shadow: 0 0 5px 5px orangered;
+}
+
+.output {
+    height: 10px;
+    width: 90%;
+    background-color: orangered;
+    color: whitesmoke;
+    padding: 10px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    text-align: center;
+    box-shadow: 0 0 5px 5px orangered;
+}
+
+.message {
+    position: absolute;
+    transition: all 0.3s ease 1;
+}
+
+.message.show {
+    animation-name: messageShow;
+    animation-duration: 0.25s;
+    animation-timing-function: ease;
+    animation-timing-function: cubic-bezier(0.64, 0.57, 0.10, 1.53);
+    color: white;
+    background-color: orangered;
+    height: 25px;
+    font-size: 20px;
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 2px;
+    opacity: 1;
+}
+
+@keyframes messageShow {
+    0% {transform: scale(0);}
+    100% {transform: scale(100%);}
+}
+
+.message.hide {
+    opacity: 0;
+}

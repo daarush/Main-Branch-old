@@ -1,0 +1,163 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    height: 98vh;
+    /* overflow: hidden; */
+}
+/****************Navigation*******************************************************/
+.navigation {
+    opacity: 5%;
+    transition: all 1s ease;
+    background-color: black;
+}
+.navigation:hover{
+    opacity: 100%;
+}
+.navigation nav{
+    padding-top: 13px;
+    position: fixed;
+    left: -10px;
+    height: 100%;
+    width: 100px;
+    background-color: purple;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+}
+
+.navigation > nav > a > i {
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.navigation > nav > a > i:hover {
+    font-size: 25px;
+    padding: 8px;
+    box-shadow: 1px 1px 10px 10px wheat;
+    background-color: blue;
+}
+
+
+/*******************Slides**************************************************/
+.slides-one{
+    background-color: gray;
+    border-radius: 10px;
+    box-shadow: 1px 1px 100px 100px rgb(235, 177, 85);
+    height: 85vh;
+    width: 60vw;
+    margin-left: 5%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.slidesPart{
+    display: flex;
+    border: none;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+}
+.slide{
+    position: absolute;
+    transition: all 2s ease;
+}
+.slide > img{
+    height: auto;
+    width: auto;
+    box-shadow: 1px 1px 10px 10px grey;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+div.off {
+    opacity: 0;
+    animation: slideOut 1s ease;
+    z-index: 0;
+}
+
+div.on {
+    opacity: 100;
+    z-index: 1;
+    left: 0vw;
+    top: 0vh;
+}
+@keyframes slideOut {
+    0% {transform: rotateY(0deg);}
+    50% {transform: rotateY(90deg);}
+    100% {transform: rotateY(180deg);}
+}
+
+/*****************************************************************************************************/
+.fa-arrow-circle-right {    
+    bottom: -1%;
+    font-size: 25px;
+    position: absolute;    
+    left: 50%;
+    transform: translateX(-50%);
+    color: whitesmoke;
+    background-color: black;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 1px 1px 10px 10px gray;
+    transition: all 0.3s ease;
+}
+.fa-arrow-circle-right:hover {
+    padding: 10px;
+    background-color: blue;
+}
+/***********************************Achivements*****************************************/
+.achivements{
+    background-color: aliceblue;
+    height: 85vh;
+    width: 60vw;
+    margin-left: 5%;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border-radius: 10px;
+    transform: translate(-50%, 0%);
+}
+
+.back-to-the-top{
+    height: 45px;
+    width: 45px;
+    position: fixed;
+    right: 5%;
+    bottom: 10%;
+    font-size: 40px;
+    color: aqua;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back-to-the-top:hover{
+    font-size: 45px;
+    color: rgb(85, 85, 187);
+}
+
+
+.last{
+    height: 25px;
+    width: 100%;
+    position: absolute;
+    background-color: aliceblue;
+    opacity: 0;
+    bottom: -100%;
+}
+

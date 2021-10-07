@@ -1,0 +1,9 @@
+{
+    "name": "Copy Text When Highlighted",
+    "description": "Copy Text When Highlighted",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "popup.html"
+      }
+  }

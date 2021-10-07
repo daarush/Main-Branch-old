@@ -1,0 +1,132 @@
+body{
+    margin: auto;
+    background-image: linear-gradient(rgb(100, 110, 155),  rgb(236, 187, 95));
+}
+
+.title-bar{
+    position: sticky;
+    height: 5%;
+    width: auto;    
+    padding: 10px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.849);
+}
+/*--------------------------------------------------------------------*/
+.title-name {
+    position: sticky;
+    font-family: 'Raleway', sans-serif;;
+    padding-left: 45%;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    border: none;
+    outline: none;    
+    background-color:rgba(255, 255, 255, 0.849);
+    transition: 1.5s;
+}
+
+.title-name:hover {
+    padding-left: 100;
+    color: rgb(56, 109, 155);
+}
+
+.title-name:active {
+    color: rgb(87, 205, 209);
+}
+/*--------------------------------------------------------------------*/
+.images {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.img {
+    height: 28%;
+    width: auto;
+    opacity: 90%; /*20*/
+    transition: 1s;
+    padding: 10px;
+    transition: all 1s ease;
+}
+
+.img-delete {
+    pointer-events: none;
+    position: absolute;
+    transform: translate(10px, 95vh) rotateY(180deg);
+    height: 0px;
+    opacity: 0%;
+}
+
+.img:hover {
+    opacity: 90%;
+    height: 35%;
+    transform: rotateZ(-5deg);
+}
+/*--------------------------------------------------------------------*/
+.main-url-add {
+    display: flex;
+    position: sticky;
+    margin: 0 ;    
+    width: 18vw;
+    bottom: 5%;
+    left: 78%;
+    background-color: aliceblue;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-plus-square {
+    font-size: 25px;
+    transition: all 1.2s ease;
+}
+
+.fa-plus-square:hover {
+    color: rgb(255, 123, 0);
+    transform: rotateZ(-180deg);
+}
+
+.textbox-label {
+    padding: 5px;
+    width: 100%;
+    background-color: aliceblue;
+    border-radius: 100px;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.textBox {
+    z-index: 0;
+    border-radius: 30px;
+    width: 100%;
+    background-color: aliceblue;
+    border: none;
+    outline: none;
+    text-align: center;
+    vertical-align: middle;
+}
+/*--------------------------------------------------------------------*/
+.delete-icon {
+    position: sticky;
+    bottom: 5%;
+    left: 2%;
+    background-color: black;
+    border-radius: 100%;
+    height: 35px;
+    width: 35px;
+    transition: all 1s ease;    
+}
+
+.fa-trash {
+    position: absolute;
+    font-size: 20px;
+    color: orange;
+    transform: translate(50%, 40%);
+    transition: all 0.5s ease;
+}
+
+
+.trash-animation {
+    transform: rotateY(180deg);
+}
+

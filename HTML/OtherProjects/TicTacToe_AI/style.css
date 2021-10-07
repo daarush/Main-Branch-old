@@ -1,0 +1,28 @@
+body {
+    margin: 0 auto;
+    background-color: black;
+}
+
+.tiles {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+}
+
+#tile {
+    border: 5px solid white;
+    height: 100px;
+    width: 100px;
+}
+
+.fa-times, .fa-circle {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    text-indent: 29px;
+}

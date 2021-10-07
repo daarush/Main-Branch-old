@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Reminder</title>
+</head>
+<body>
+
+    <div class="tools">
+        <div class="tool-title">Tools</div>
+
+        <div class="create">
+            <div class="create-title">Create New</div>
+
+            <div class="create-name">Name:
+                <input type="text" class="create-add-text" placeholder="Type Something!">
+            </div>
+
+            <div class="create-description">
+                <div class="create-description-title">Description:</div>
+                <textarea name="" class="create-add-description" cols="30" rows="5" placeholder="Optional!"></textarea>
+            </div>
+
+            <div class="time-div">
+                Remind me at:
+                <input type="date" class="get-input-date">
+                <input type="time" class="get-input-time">
+
+            </div>
+
+            <div class="create-button">Create</div>
+        </div>
+        
+    </div>    
+    <div class="open-tools">
+        <i class="fas fa-caret-left"></i>
+    </div>
+
+    <div class="container">
+        <div class="container-title">Reminders</div>
+
+        <div class="object">
+            <div class="title">Title
+                <i class="fas fa-caret-down"></i> 
+                
+                <span class="fa-stack fa-1x">
+                    <i class="far fa-square fa-stack-1x"></i>                
+                </span>
+
+            </div>
+
+            <div class="description">Description</div>
+
+            <div class="foot-note">
+                Remind You At:
+            </div>
+        </div>
+
+    </div>
+
+    <div class="right-click-menu hide">
+        <div class="delete-all" id="right-click-option">Delete All</div>
+        <div class="delete-checked" id="right-click-option">Delete Checked</div>
+        <div class="select-all" id="right-click-option">Select All</div>
+        <div class="unselect-all" id="right-click-option">Deselect All</div>
+        <div class="expand-collapse" id="right-click-option">Expand/Collapse All</div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

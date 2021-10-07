@@ -1,0 +1,24 @@
+Fontawesome (icons) : 
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+Google Fonts, Poppins: 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+Google Fonts, Raleway:
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+
+Google Fonts, Poppins and Raleway:
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap" rel="stylesheet">
+
+Coding Text Font: Inconsolata
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+
+
+Raleway:
+font-family: 'Raleway', sans-serif;
+
+Poppins:
+font-family: 'Poppins', sans-serif;
+
+Dev Ed:
+youtube guy, has js and other stuff
