@@ -10,8 +10,6 @@
 	"permissions": ["tabs"],
 
 	"background": {
-		"scripts": ["main.js"],
-		"persistent": false
-	},
-    "browser_action": {}
+		"service_worker": "background.js"
+	}
 }
