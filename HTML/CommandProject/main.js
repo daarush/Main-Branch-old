@@ -1,39 +1,47 @@
 var bodyText = document.querySelector(".textarea");
 
 bodyText.addEventListener("keypress", () => {
-    var key = window.event.keyCode;
-    if (key === 13) {
-        var contenteditable = document.querySelector("[contenteditable]");
-        var text = contenteditable.textContent;
+	var key = window.event.keyCode;
+	if (key === 13) {
+		var contenteditable = document.querySelector("[contenteditable]");
+		var text = contenteditable.textContent;
+		var subString = text.substring(
+			text.indexOf("|") + 1,
+			text.lastIndexOf("|")
+		);
 
-        var subString = text.substring(
-            text.indexOf("!") + 1,
-            text.lastIndexOf("!")
-        ); //gets specific phrase
-        // 'subString' phrase is also the thing i wanted it to be replaced
-
-        const string = subString;
-        if (subString !== "") {
-            console.log(string);
-            newTask(string);
-            text.replace(subString, "[][]"); //<--this does not work
-        }
-
-    }
+		if (subString != "") {
+			var tasks = document.getElementsByTagName("div");
+			for (let i = 0; i < tasks.length; i++) {
+				if (tasks[i].innerHTML == subString) {
+					console.log(console.log("contains"));
+				} else {
+					const selection = window.getSelection();
+					if (selection.rangeCount !== 0) {
+						const range = selection.getRangeAt(0).cloneRange();
+						range.collapse(true);
+						const rect = range.getClientRects()[0];
+						if (rect) {
+							x = rect.left;
+							y = rect.top;
+						}
+						newTask(subString, rect.y);
+					}
+				}
+			}
+		}
+	}
 });
 
-function newTask(input) {
-    var taskDiv = document.createElement("div");
-    taskDiv.className = "task";
-    taskDiv.addEventListener("click", () => {
-        taskDiv.classList.toggle("completed");
-    });
+function newTask(text, posY) {
+	var taskDiv = document.createElement("div");
+	taskDiv.className = "task";
+	taskDiv.innerHTML = text;
+	document.body.appendChild(taskDiv);
+	taskDiv.style.left = 0;
+	taskDiv.style.top = posY;
 
-    var textboxDiv = document.createElement("div");
-    textboxDiv.className = "textbox";
-    textboxDiv.contentEditable = true;
-    textboxDiv.innerHTML = input;
-
-    taskDiv.appendChild(textboxDiv);
-    bodyText.appendChild(taskDiv);
+	taskDiv.addEventListener("click", () => {
+		taskDiv.classList.toggle("completed");
+	});
 }
