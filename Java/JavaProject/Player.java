@@ -1,4 +1,4 @@
-package JavaProject;
+package Main_Branch.Java.JavaProject;
 
 public class Player {
     

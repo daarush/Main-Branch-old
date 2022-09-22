@@ -1,4 +1,4 @@
-package JavaProject;
+package Main_Branch.Java.JavaProject;
 
 public class Box {
     private int height;
@@ -9,5 +9,4 @@ public class Box {
         this.width = w;
     }
 
-    
 }

@@ -1,0 +1,21 @@
+{
+	"name": "Tab Management",
+	"version": "0.1.0",
+	"description": "ManagingTabs",
+	"manifest_version": 3,
+	"action": {
+		"default_popup": "popup.html"
+	},
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://*/*"],
+			"js": ["content-script.js"],
+			"run_at": "document_idle",
+			"all_frames": false
+		}
+	],
+	"permissions": ["tabs", "activeTab"]
+}

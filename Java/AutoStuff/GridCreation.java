@@ -1,4 +1,4 @@
-package Java.AutoStuff;
+package Main_Branch.Java.AutoStuff;
 
 import java.awt.*;
 import java.awt.event.*;
