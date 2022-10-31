@@ -17,7 +17,7 @@ public class Automation extends Frame implements ActionListener {
 	static JFrame frame;
 	int startingChar_Id = 65;
 	Robot r;
-	int sleepDuration = 500;
+	int sleepDuration = 750;
 
 	public static void main(String[] args) {
 		Automation a = new Automation();

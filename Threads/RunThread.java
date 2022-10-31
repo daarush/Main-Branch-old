@@ -7,5 +7,6 @@ public class RunThread {
 
         t1.run();
         t1.wait(500);
+
     }
 }
