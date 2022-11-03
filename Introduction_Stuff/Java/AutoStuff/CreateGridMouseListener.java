@@ -1,4 +1,4 @@
-package Main_Branch.Java.AutoStuff;
+package Introduction_Stuff.Java.AutoStuff;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -23,7 +23,7 @@ public class CreateGridMouseListener implements MouseListener {
                 newbtn.setVisible(true);
                 isClicked = true;
             }
-        } else if (isClicked == true){
+        } else if (isClicked == true) {
             for (gridCount = 0; gridCount < totalGridBoxes; gridCount++) {
                 newbtn.setVisible(false);
                 isClicked = false;

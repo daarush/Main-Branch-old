@@ -1,4 +1,4 @@
-package Main_Branch.Threads;
+package Introduction_Stuff.Threads;
 
 public class RunThread {
     public static void main(String[] args) throws InterruptedException {

@@ -1,4 +1,4 @@
-package Main_Branch.Java.AutoStuff;
+package Introduction_Stuff.Java.AutoStuff;
 
 import java.awt.Color;
 import java.awt.event.*;
